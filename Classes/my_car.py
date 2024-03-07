@@ -1,6 +1,6 @@
 from Car import ElectricCar
 
-new_car = ElectricCar("Mercedes", "AMG", 2020)
+new_car = ElectricCar("Toyota", "Prius", 2020)
 print(new_car.get_name())
 new_car.battery.batterySize()
 new_car.battery.get_range()
