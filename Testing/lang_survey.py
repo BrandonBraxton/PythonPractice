@@ -8,7 +8,7 @@ my_suvery = AnonSurvey(question)
 my_suvery.show_question()
 print("Enter 'q' to quit. ")
 while True:
-    response = raw_input("Language: ")
+    response = input("Language: ")
     if response == 'q':
         break
     my_suvery.store_response(response)

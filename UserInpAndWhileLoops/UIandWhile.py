@@ -7,9 +7,6 @@ print(message)
 name = raw_input("Please enter your name: ")
 print ("Hello, my name is " + name + "!")
 
-#import sys
-#print(sys.version)
-
 height = input("How tall? ")
 height = int(height)
 
@@ -18,9 +15,10 @@ if height >=60:
 else:
    print( "you are short")"""
 #simple while
+import sys
+print(sys.version)
 
 from http.client import responses
-
 
 current = 0
 while current < 5:
@@ -84,12 +82,12 @@ responses = {}
     #set flag to true
 polling = True
 while polling:
-    name = raw_input("\nWhat is your name? ")
-    response = raw_input("Which mountain would you like to climb? ")
+    name = input("\nWhat is your name? ")
+    response = input("Which mountain would you like to climb? ")
     #store response in dictionary
     responses[name] = response
-    repeat = raw_input("Would you like to let another person respond? (yes/no) ")
-    if repeat == "no":
+    repeat = input("Would you like to let another person respond? (yes/no) ")
+    if repeat == "no" or repeat == 'n':
         polling = False
 print("\n--- Poll Results ---")
 for name, response in sorted(responses.items()):
