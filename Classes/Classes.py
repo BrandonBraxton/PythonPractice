@@ -13,9 +13,10 @@ class Dog():
     def bark(self):
         print(self.name.title() + " barked!")
     
-
+print('\n')
 my_dog = Dog("Rocky", 2)
 print(my_dog.name.title() + " is " + str(my_dog.age) + "years old.")
 my_dog.sit()
 my_dog.roll_over()
 my_dog.bark()
+print('\n')
