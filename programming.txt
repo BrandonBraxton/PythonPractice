@@ -1,4 +1,7 @@
-I love programming!
-I love programming too!
-I also love programming!
-I love programming as well!
+en
+!
+show spanning-tree
+!
+show int trunk
+!
+show int status
