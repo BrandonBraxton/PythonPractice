@@ -66,8 +66,24 @@ def generate_colors(colorChoice, numb):
             endRgb+=1
             if endRgb == numb:
                 break
-        return rgbList
-            
-print(generate_colors('hexa',3))
-print(generate_colors('rgb',2))
+        return rgbList     
+# print(generate_colors('hexa',4))
+# print(generate_colors('rgb',4))
+
+def shuffle_list(x):
+    shuff =  []
+    for i in range(len(x)):
+        shuff.insert(randint(0,len(x)),i)
+    print(shuff)
+# a = [1,2,3,4,5]
+# shuffle_list(a)
+
+def unique_array(x):
+    uni = []
+    uniSet = {}
+    for x in string.digits:
         
+        # if
+        # uni.append(x)
+        
+print(string.digits[0])
