@@ -1,0 +1,1 @@
+This is a text file to practice with file handling. This is the second line of this file.

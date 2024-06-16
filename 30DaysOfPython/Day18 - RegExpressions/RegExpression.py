@@ -49,3 +49,13 @@ paragraph = 'I love teaching. If you do not love teaching what else can you love
 res = [(paragraph.count(key),key) for key in paragraph.split()]
 filtering = set(res)
 print(list(filtering))
+
+
+##### valid python variable #####
+def is_valid_variable(var):
+    print(var.isidentifier())
+
+is_valid_variable('first_name') # True
+is_valid_variable('first-name') # False
+is_valid_variable('1first_name') # False
+is_valid_variable('firstname') # True
