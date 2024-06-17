@@ -71,28 +71,28 @@ print()
     #     print('Grade:','F')
     
 ##### Finding Season #####
-    # season = {
-    #     'Spring': ['March', 'April', 'May'],
-    #     'Summer': ['June', 'July', 'August'],
-    #     'Fall': ['September', 'October', 'November'],
-    #     'Winter': ['December', 'January', 'February']
-    # }
-    # ##print(season.keys())
-    # ##print(season.values())
-    # ##print(season.items())
-    # ##print(season.get('Summer')[0])
-    # ##print('April' in season.get('Spring'))
+season = {
+        'Spring': ['March', 'April', 'May'],
+        'Summer': ['June', 'July', 'August'],
+        'Fall': ['September', 'October', 'November'],
+        'Winter': ['December', 'January', 'February']
+    }
+print(list(season.keys())[0])
+print(season.values())
+print(season.items())
+print(season.get('Summer')[0])
+print('April' in season.get('Spring'))
 
-    # user = input('Enter the Month: ')
+user = input('Enter the Month: ')
 
-    # if user in season.get('Spring'):
-    #     print('Season: ','Spring')
-    # elif user in season.get('Summer'):
-    #     print('Season: ','Summer')
-    # elif user in season.get('Fall'):
-    #     print('Season: ','Fall')
-    # else:
-    #     print('Season: ','Winter')
+if user in season.get('Spring'):
+    print('Season: ','Spring')
+elif user in season.get('Summer'):
+    print('Season: ','Summer')
+elif user in season.get('Fall'):
+    print('Season: ','Fall')
+else:
+    print('Season: ','Winter')
 #### Check fruit in list ####
     # fruits = ['banana', 'orange', 'mango', 'lemon']
     # x = input("Enter a fruit: ")
@@ -104,35 +104,35 @@ print()
     #     print(added)
     #     print(fruits)
 
-person={
-    'first_name': 'Asabeneh',
-    'last_name': 'Yetayeh',
-    'age': 250,
-    'country': 'Finland',
-    'is_marred': True,
-    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
-    'address': {
-        'street': 'Space street',
-        'zipcode': '02210'
-    }
-}
-# check IF key in dictionary, IF so print middle value 
-if 'skills' in person.keys():
-    print('Middle value of key: ', person.get('skills')[len(person['skills'])//2])
-    # check if person has value in values for given key
-    print('Python skills?', 'Python' in person.get('skills'))
-    if len(person.get('skills')) == 2 and 'JavaScript' in person.get('skills') and 'React' in person.get('skills'):
-        print("You are a frontend developer.")
-    elif len(person.get('skills')) == 3 and 'Node' in person.get('skills') and 'Python' in person.get('skills') and 'MongoDB' in person.get('skills'):
-        print("You are a backend developer.")
-    elif len(person.get('skills')) == 3 and 'Node' in person.get('skills') and 'React' in person.get('skills') and 'MongoDB' in person.get('skills'):
-        print("You are a fullstack developer")
-    else:
-        print('Based on Skills:', 'unknown title')
+# person={
+#     'first_name': 'Asabeneh',
+#     'last_name': 'Yetayeh',
+#     'age': 250,
+#     'country': 'Finland',
+#     'is_marred': True,
+#     'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+#     'address': {
+#         'street': 'Space street',
+#         'zipcode': '02210'
+#     }
+# }
+# # check IF key in dictionary, IF so print middle value 
+# if 'skills' in person.keys():
+#     print('Middle value of key: ', person.get('skills')[len(person['skills'])//2])
+#     # check if person has value in values for given key
+#     print('Python skills?', 'Python' in person.get('skills'))
+#     if len(person.get('skills')) == 2 and 'JavaScript' in person.get('skills') and 'React' in person.get('skills'):
+#         print("You are a frontend developer.")
+#     elif len(person.get('skills')) == 3 and 'Node' in person.get('skills') and 'Python' in person.get('skills') and 'MongoDB' in person.get('skills'):
+#         print("You are a backend developer.")
+#     elif len(person.get('skills')) == 3 and 'Node' in person.get('skills') and 'React' in person.get('skills') and 'MongoDB' in person.get('skills'):
+#         print("You are a fullstack developer")
+#     else:
+#         print('Based on Skills:', 'unknown title')
 
-marriedFinland = '%s %s live in %s. He is married'%(person['first_name'], person['last_name'], person['country'])
+# marriedFinland = '%s %s live in %s. He is married'%(person['first_name'], person['last_name'], person['country'])
 
-if person['is_marred' ]== True and person['country'] == 'Finland':
-    print(marriedFinland)
-else:
-    print('Not married or not living in Finland')
+# if person['is_marred' ]== True and person['country'] == 'Finland':
+#     print(marriedFinland)
+# else:
+#     print('Not married or not living in Finland')

@@ -6,6 +6,7 @@ print('################# Dictionaries #################','\n')
 ####### Create empty dictionary #######
 dog = dict()
 print('Printing empty dictionary:',dog)
+print(type(dog))
 
 ###### Adding Key/Value pairs #####
 
