@@ -195,22 +195,109 @@
         # # ['Organizing', 'Marketing', 'Digital Marketing']
     # We can use super() built-in function or the parent name Person to automatically inherit the methods and properties from its parent. In the example above we override the parent method. The child method has a different feature, it can identify, if the gender is male or female and assign the proper pronoun(He/She).
 
-import Stats
-
+import math
+class Stats:
+    def __init__(self):
+        pass
+    
+    def mean(self,x):
+        if not x:
+            return "The list is empty."
+        sum = 0
+        for i in x:
+            sum+=i
+        result = sum/len(x)
+        return result
+    
+    def median(self,x):
+        if not x:
+            return "The list is empty."
+        x.sort()
+        return x[len(x)//2]
+    
+    def mode(self,x):
+        if not x:
+            return "The list is empty."
+        uniqueList = list(set(list(x)))
+        modeDICT = {}
+        
+        for i in uniqueList:
+            getCount = x.count(i)
+            modeDICT[i] = getCount
+            
+        max_repeat = 0
+        for i in uniqueList:
+            getValue = modeDICT[i]
+            if getValue > max_repeat:
+                max_repeat = getValue
+        #print(max_repeat)
+                
+        res = ''
+        for i in uniqueList:
+            if modeDICT[i] == max_repeat:
+                res = res+str(i)+" "
+        mo = {'Mode': res, 'Repeat': max_repeat}
+        return mo
+    
+    def count(self,x):
+        if not x:
+            return "The list is empty."
+        cnt = 0
+        for i in x:
+            cnt +=1
+        return cnt
+    
+    def sum(self,x):
+        if not x:
+            return "The list is empty."
+        sum = 0
+        for i in x:
+            sum += i
+        return sum
+    
+    def min(self,x):
+        if not x:
+            return "The list is empty."
+        x.sort()
+        return x[0]
+    
+    def max(self,x):
+        if not x:
+            return "The list is empty."
+        x.sort()
+        return x[len(x)-1]
+    
+    def range(self,x):
+        if not x:
+            return "The list is empty."
+        x.sort()
+        return x[len(x)-1] - x[0]
+    
+    def std(self,x):
+        var = sum([((y - self.mean(x)) **2) for y in x]) / len(x)
+        res = var ** 0.5
+        z = "{:.1f}".format(res)
+        return z
+    
+    def var(self,x):
+        var = sum([((y - self.mean(x)) **2) for y in x]) / len(x)
+        res = "{:.1f}".format(var)
+        return res
+    
 st = Stats()
-print(type(st))
+#print(type(st))
 ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
 
-# print('Count:', data.count()) # 25
-# print('Sum: ', data.sum()) # 744
-# print('Min: ', data.min()) # 24
-# print('Max: ', data.max()) # 38
-# print('Range: ', data.range() # 14
 print('Mean: ', st.mean(ages)) # 30
 print('Median: ', st.median(ages)) # 29
 print('Mode: ', st.mode(ages)) # {'mode': 26, 'count': 5}
-# print('Standard Deviation: ', data.std()) # 4.2
-# print('Variance: ', data.var()) # 17.5
+print('Count:', st.count(ages)) # 25
+print('Sum: ', st.sum(ages)) # 744
+print('Min: ', st.min(ages)) # 24
+print('Max: ', st.max(ages)) # 38
+print('Range: ', st.range(ages)) # 14
+print('Standard Deviation: ', st.std(ages)) # 4.2
+print('Variance: ', st.var(ages)) # 17.5 
 # print('Frequency Distribution: ', data.freq_dist()) # [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)]
 
 
